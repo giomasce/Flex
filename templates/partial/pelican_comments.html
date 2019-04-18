@@ -1,0 +1,11 @@
+{% if article.comments %}
+    <h2>Comments</h2>
+    <ul>
+      {% for comment in article.comments %}
+        <li>
+          <p>{{ comment.author }} said, on {{ comment.date }}:</p>
+          {{ comment.content }}
+        </li>
+      {% endfor %}
+    </ul>
+{% endif %}
